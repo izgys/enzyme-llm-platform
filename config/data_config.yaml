@@ -16,8 +16,10 @@ filtering:
   min_length: 50         # Shorter = likely fragments, not full enzymes
   max_length: 1024       # ESM-2 context window — longer sequences lose C-terminus
   min_ec_digits: 2       # Need at least X.Y — "3.-.-.-" is too vague for sub-class task
+  min_class_count: 100   # Drop sub-classes with fewer sequences than this
 
 output:
   raw_dir: "data/raw"
   raw_filename: "uniprot_enzymes_raw.json"
   checksums_file: "data/checksums.json"
+  processed_dir: "data/processed"
