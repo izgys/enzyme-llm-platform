@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Data — raw downloads are not tracked (too large, reproducible via download script)
+data/raw/*
+data/processed/*
+data/clusters/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/clusters/.gitkeep
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Experiments — model weights and artifacts are not tracked
+experiments/**/artifacts/
+experiments/**/*.pt
+experiments/**/*.bin
+
+# Notebooks — strip outputs before committing
+notebooks/.ipynb_checkpoints/
+
+# Environment
+.env
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
