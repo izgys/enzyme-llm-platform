@@ -1,4 +1,4 @@
-# ESM2-EnzymeClassifier — Protein Language Model Fine-Tuning for Enzyme Family Classification
+# ESM2-EnzymeClassifier: Protein Language Model (PLM) fine-tuning for enzyme sub-class classification with homology-aware evaluation and calibrated uncertainty
 
 **Author:** Iker Zapirain Gysling  
 **Status:** In development  
