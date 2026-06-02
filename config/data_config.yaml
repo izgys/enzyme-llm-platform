@@ -23,3 +23,10 @@ output:
   raw_filename: "uniprot_enzymes_raw.json"
   checksums_file: "data/checksums.json"
   processed_dir: "data/processed"
+  clusters_dir: "data/clusters"
+
+clustering:
+  min_seq_id: 0.30       # 30% identity threshold — community standard
+  train_frac: 0.70
+  val_frac: 0.15         # test_frac is implicit: 1 - train - val = 0.15
+  seed: 42               # fixed seed — reproducible splits
