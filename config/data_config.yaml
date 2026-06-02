@@ -1,0 +1,23 @@
+uniprot:
+  # Swiss-Prot only (reviewed:true) — manually curated, high-quality EC labels
+  # ec:* means "has at least one EC annotation"
+  base_url: "https://rest.uniprot.org/uniprotkb/search"
+  query: "reviewed:true AND ec:*"
+  format: "json"
+  fields:
+    - "accession"        # UniProt ID — traceability, later links to PDB
+    - "sequence"         # Amino acid sequence — input to ESM-2
+    - "ec"               # EC number — our label
+    - "protein_name"     # Human-readable name — sanity checking
+    - "organism_name"    # Organism — useful for stratification analysis
+  page_size: 500         # Maximum allowed by UniProt API
+
+filtering:
+  min_length: 50         # Shorter = likely fragments, not full enzymes
+  max_length: 1024       # ESM-2 context window — longer sequences lose C-terminus
+  min_ec_digits: 2       # Need at least X.Y — "3.-.-.-" is too vague for sub-class task
+
+output:
+  raw_dir: "data/raw"
+  raw_filename: "uniprot_enzymes_raw.json"
+  checksums_file: "data/checksums.json"
