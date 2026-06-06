@@ -1,0 +1,11 @@
+{
+  "model": "facebook/esm2_t33_650M_UR50D",
+  "probe": "LogisticRegression",
+  "test_macro_f1": 0.4940413226966594,
+  "test_micro_f1": 0.6788649645301416,
+  "val_macro_f1": 0.4449804371334178,
+  "n_train": 152334,
+  "n_val": 32629,
+  "n_test": 31999,
+  "n_classes": 59
+}
